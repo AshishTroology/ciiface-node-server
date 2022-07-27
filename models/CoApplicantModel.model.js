@@ -1,0 +1,43 @@
+const mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+
+const coapplicantSchema = new mongoose.Schema({
+    applicantId: { type: mongoose.Schema.ObjectId },
+    co_organizationName: {type:String},
+    co_hightestRanking: {type:String},
+    co_Designation: {type:String},
+    co_operationForm: {type:String},
+    co_email: {type:String},
+    co_mobileNo: {type:String},
+    co_applicantAddress1: {type:String},
+    co_applicantCountry: {type:String},
+    co_applicantZipCode: {type:String},
+    co_applicantState: {type:String},
+    co_applicantCity: {type:String},
+    co_contactPerson: {type:String},
+    co_contactDesignation: {type:String},
+    co_contactEmail: {type:String},
+    co_contactMobile: {type:String},
+    co_contactAddress1: {type:String},
+    co_contactCountry: {type:String},
+    co_contactZipCode: {type:String},
+    co_contactState: {type:String},
+    co_contactCity: {type:String},
+    co_FoodCategoryNameNumber: {type:String},
+    co_criteria: {type:String},
+    co_annualApplicant: {type:String},
+    co_product: {type:Array},
+    co_totalEmployee: {type:String},
+    co_applicantEquipment: {type:String},
+    co_gst: {type:String},
+    co_tax_invoice: {type:String},
+    co_billingAddress: {type:String},
+    annualApplicantRupee:{type:String},
+    code1:{type:String},
+    code2:{type:String},
+    created_at: { type: Date, default: Date.now },
+    updated_at: { type: Date, default: Date.now },
+    status: { type: String, default: "active" },
+});
+
+module.exports = mongoose.model("coapplicant", coapplicantSchema);

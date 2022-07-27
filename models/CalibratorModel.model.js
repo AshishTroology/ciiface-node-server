@@ -1,0 +1,88 @@
+const mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+
+const calibratorSchema = new mongoose.Schema({
+    token: { type: String },
+    zone: { type: String },
+    calibratorId: { type: Number },
+    batch: { type: String },
+    designation: { type: String },
+    presentCo: { type: String },
+    pastCo: { type: String },
+    fsmsCertificate: { type: String },
+    exposure: { type: String },
+
+    title: { type: String },
+    firstName: { type: String },
+    lastName: { type: String },
+    phone: { type: String },
+    email: { type: String , index: true, unique: true },
+    education: { type: String },
+    year: { type: String },
+    skill: { type: String },
+    domain: { type: String },
+
+    addressLine1: { type: String },
+    addressLine2: { type: String },
+    zipCode: { type: String },
+    country: { type: String },
+    state: { type: String },
+    city: { type: String },
+
+    assessorsName: { type: String },
+    assessorsFullname: { type: String },
+    assessorsDate: { type: String },
+    assessorsPhone: { type: String },
+    assessorsAlternateno: { type: String },
+    assessorsEmail: { type: String },
+    assessorsSecondaryemail: { type: String },
+    assessorsEducation: { type: String },
+    assessorsdomainExpertise: { type: String },
+    assessorsTraining: { type: String },
+    assessorsExposure: { type: String },
+    assessorsFsmsqualified: { type: String },
+
+    residentialAddressline: { type: String },
+    residentialAddressline2: { type: String },
+    residentialCountry: { type: String },
+    residentialState: { type: String },
+    residentialCity: { type: String },
+    residentialZipcode: { type: String },
+
+    Organization: { type: String },
+    organizationDesignation: { type: String },
+    organizationOfficialphoneno: { type: String },
+    organizationEmailofficial: { type: String },
+    organizationProductservice: { type: String },
+    organizationAddressline1: { type: String },
+    organizationAddressline2: { type: String },
+    organizationCountry: { type: String },
+    organizationState: { type: String },
+    organizationCity: { type: String },
+    organizationZipcode: { type: String },
+    organizationTitle: { type: String },
+    organizationFullname: { type: String },
+    organization_Designation: { type: String },
+    organizationPhone: { type: String },
+    organizationEmail: { type: String },
+
+    org_title: { type: String },
+    org_designation: { type: String },
+    org_officialPhoneno: { type: String },
+    org_Emailofficial: { type: String },
+    org_Productservice: { type: String },
+    orgn_Title: { type: String },
+    org_Fullname: { type: String },
+    report_Designation: { type: String },
+    org_Phone: { type: String },
+    org_Email: { type: String },
+
+
+
+    created_at: { type: Date, default: Date.now },
+    updated_at: { type: Date, default: Date.now },
+    invite: { type: Boolean, default: false },
+    status: { type: String, default: "active" },
+});
+
+module.exports = mongoose.model("calibrator", calibratorSchema);
